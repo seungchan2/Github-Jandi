@@ -7,13 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5D56302C69D3780073865E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D562F2C69D3780073865E /* LoadingView.swift */; };
+		6D5D56322C69D3AF0073865E /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D56312C69D3AF0073865E /* ShopItem.swift */; };
+		6D5D56352C69D78C0073865E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D56342C69D78C0073865E /* BackButton.swift */; };
+		6D5D563A2C69DA3B0073865E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D56362C69DA3B0073865E /* Font.swift */; };
+		6D5D563B2C69DA3B0073865E /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D56372C69DA3B0073865E /* FontType.swift */; };
+		6D5D563C2C69DA3B0073865E /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D56382C69DA3B0073865E /* Resource.swift */; };
+		6D5D56402C69F76A0073865E /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9172C6444ED002FC4B0 /* Pretendard-Black.otf */; };
+		6D5D56412C69F77F0073865E /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E91A2C6444ED002FC4B0 /* Pretendard-Bold.otf */; };
+		6D5D56422C69F7810073865E /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E91B2C6444ED002FC4B0 /* Pretendard-ExtraBold.otf */; };
+		6D5D56432C69F7830073865E /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9152C6444ED002FC4B0 /* Pretendard-ExtraLight.otf */; };
+		6D5D56442C69F7850073865E /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9192C6444ED002FC4B0 /* Pretendard-Light.otf */; };
+		6D5D56452C69F7880073865E /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9162C6444ED002FC4B0 /* Pretendard-Medium.otf */; };
+		6D5D56462C69F7980073865E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9182C6444ED002FC4B0 /* Pretendard-Regular.otf */; };
+		6D5D56472C69F79B0073865E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9132C6444ED002FC4B0 /* Pretendard-SemiBold.otf */; };
+		6D5D56482C69F79D0073865E /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE8E9142C6444ED002FC4B0 /* Pretendard-Thin.otf */; };
+		6D5D564A2C69FDF60073865E /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 6D5D56492C69FDF60073865E /* Core */; };
 		6D7398372C5C6C59004B3E13 /* Jandi_PlantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398362C5C6C59004B3E13 /* Jandi_PlantApp.swift */; };
-		6D7398392C5C6C59004B3E13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398382C5C6C59004B3E13 /* ContentView.swift */; };
 		6D73983B2C5C6C5B004B3E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D73983A2C5C6C5B004B3E13 /* Assets.xcassets */; };
 		6D73983E2C5C6C5B004B3E13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D73983D2C5C6C5B004B3E13 /* Preview Assets.xcassets */; };
 		6D7398482C5C6C5B004B3E13 /* Jandi_PlantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398472C5C6C5B004B3E13 /* Jandi_PlantTests.swift */; };
 		6D7398522C5C6C5B004B3E13 /* Jandi_PlantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398512C5C6C5B004B3E13 /* Jandi_PlantUITests.swift */; };
 		6D7398542C5C6C5B004B3E13 /* Jandi_PlantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398532C5C6C5B004B3E13 /* Jandi_PlantUITestsLaunchTests.swift */; };
+		6D7398612C5C765B004B3E13 /* GithubLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7398602C5C765B004B3E13 /* GithubLoginView.swift */; };
+		6D782CF92C609384004B0E74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D782CF82C609384004B0E74 /* HomeView.swift */; };
+		6D782CFB2C6093DB004B0E74 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D782CFA2C6093DB004B0E74 /* RootView.swift */; };
+		6D782CFF2C60945D004B0E74 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D782CFE2C60945D004B0E74 /* LoginReducer.swift */; };
+		6D782D012C609494004B0E74 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D782D002C609494004B0E74 /* HomeReducer.swift */; };
+		6D782D032C6094B4004B0E74 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D782D022C6094B4004B0E74 /* AppReducer.swift */; };
+		6DA7050C2C6460090035CE02 /* JandiNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 6DA7050B2C6460090035CE02 /* JandiNetwork */; };
+		6DA7050F2C65D02C0035CE02 /* ShopReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA7050E2C65D02C0035CE02 /* ShopReducer.swift */; };
+		6DE8E8ED2C633864002FC4B0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8E8EC2C633864002FC4B0 /* CalendarView.swift */; };
+		6DE8E8F22C633CAA002FC4B0 /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8E8F12C633CAA002FC4B0 /* CalendarDayView.swift */; };
+		6DE8E8FC2C63455B002FC4B0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8E8FB2C63455B002FC4B0 /* SettingView.swift */; };
+		6DE8E8FF2C634ED8002FC4B0 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8E8FE2C634ED8002FC4B0 /* ShopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D5D562F2C69D3780073865E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		6D5D56312C69D3AF0073865E /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		6D5D56342C69D78C0073865E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		6D5D56362C69DA3B0073865E /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		6D5D56372C69DA3B0073865E /* FontType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
+		6D5D56382C69DA3B0073865E /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		6D7398332C5C6C59004B3E13 /* Jandi-Plant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jandi-Plant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7398362C5C6C59004B3E13 /* Jandi_PlantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jandi_PlantApp.swift; sourceTree = "<group>"; };
-		6D7398382C5C6C59004B3E13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6D73983A2C5C6C5B004B3E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D73983D2C5C6C5B004B3E13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6D7398432C5C6C5B004B3E13 /* Jandi-PlantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jandi-PlantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +76,29 @@
 		6D73984D2C5C6C5B004B3E13 /* Jandi-PlantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jandi-PlantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7398512C5C6C5B004B3E13 /* Jandi_PlantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jandi_PlantUITests.swift; sourceTree = "<group>"; };
 		6D7398532C5C6C5B004B3E13 /* Jandi_PlantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jandi_PlantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6D7398602C5C765B004B3E13 /* GithubLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLoginView.swift; sourceTree = "<group>"; };
+		6D7398622C5C77E0004B3E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D782CF82C609384004B0E74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6D782CFA2C6093DB004B0E74 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		6D782CFE2C60945D004B0E74 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
+		6D782D002C609494004B0E74 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		6D782D022C6094B4004B0E74 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		6DA7050D2C64624D0035CE02 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		6DA7050E2C65D02C0035CE02 /* ShopReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopReducer.swift; sourceTree = "<group>"; };
+		6DE8E8EC2C633864002FC4B0 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6DE8E8F12C633CAA002FC4B0 /* CalendarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
+		6DE8E8FB2C63455B002FC4B0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		6DE8E8FE2C634ED8002FC4B0 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		6DE8E9132C6444ED002FC4B0 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		6DE8E9142C6444ED002FC4B0 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		6DE8E9152C6444ED002FC4B0 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		6DE8E9162C6444ED002FC4B0 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		6DE8E9172C6444ED002FC4B0 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		6DE8E9182C6444ED002FC4B0 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		6DE8E9192C6444ED002FC4B0 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		6DE8E91A2C6444ED002FC4B0 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		6DE8E91B2C6444ED002FC4B0 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		6DE8E91F2C645F62002FC4B0 /* JandiNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JandiNetwork; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA7050C2C6460090035CE02 /* JandiNetwork in Frameworks */,
+				6D5D564A2C69FDF60073865E /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,13 +128,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D5D56332C69D77E0073865E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D562F2C69D3780073865E /* LoadingView.swift */,
+				6D5D56342C69D78C0073865E /* BackButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6D5D56392C69DA3B0073865E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D56362C69DA3B0073865E /* Font.swift */,
+				6D5D56372C69DA3B0073865E /* FontType.swift */,
+				6D5D56382C69DA3B0073865E /* Resource.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6D73982A2C5C6C59004B3E13 = {
 			isa = PBXGroup;
 			children = (
+				6DA7050D2C64624D0035CE02 /* Core */,
+				6DE8E91F2C645F62002FC4B0 /* JandiNetwork */,
 				6D7398352C5C6C59004B3E13 /* Jandi-Plant */,
 				6D7398462C5C6C5B004B3E13 /* Jandi-PlantTests */,
 				6D7398502C5C6C5B004B3E13 /* Jandi-PlantUITests */,
 				6D7398342C5C6C59004B3E13 /* Products */,
+				6DA7050A2C6460090035CE02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,9 +173,10 @@
 		6D7398352C5C6C59004B3E13 /* Jandi-Plant */ = {
 			isa = PBXGroup;
 			children = (
-				6D7398362C5C6C59004B3E13 /* Jandi_PlantApp.swift */,
-				6D7398382C5C6C59004B3E13 /* ContentView.swift */,
-				6D73983A2C5C6C5B004B3E13 /* Assets.xcassets */,
+				6DE8E91C2C644541002FC4B0 /* Resource */,
+				6DE8E8E52C633570002FC4B0 /* Application */,
+				6DE8E8E42C633564002FC4B0 /* Reducer */,
+				6DE8E8DF2C633502002FC4B0 /* View */,
 				6D73983C2C5C6C5B004B3E13 /* Preview Content */,
 			);
 			path = "Jandi-Plant";
@@ -127,6 +207,123 @@
 			path = "Jandi-PlantUITests";
 			sourceTree = "<group>";
 		};
+		6DA7050A2C6460090035CE02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DE8E8DF2C633502002FC4B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D56332C69D77E0073865E /* Common */,
+				6DE8E8FD2C634ECB002FC4B0 /* Shop */,
+				6DE8E8FA2C634551002FC4B0 /* Setting */,
+				6DE8E8EB2C633858002FC4B0 /* Calendar */,
+				6DE8E8E22C63354E002FC4B0 /* Home */,
+				6DE8E8E12C633515002FC4B0 /* Login */,
+				6DE8E8E02C63350E002FC4B0 /* Root */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DE8E8E02C63350E002FC4B0 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6D782CFA2C6093DB004B0E74 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		6DE8E8E12C633515002FC4B0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6D7398602C5C765B004B3E13 /* GithubLoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6DE8E8E22C63354E002FC4B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6D782CF82C609384004B0E74 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6DE8E8E42C633564002FC4B0 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				6D782D022C6094B4004B0E74 /* AppReducer.swift */,
+				6D782D002C609494004B0E74 /* HomeReducer.swift */,
+				6D782CFE2C60945D004B0E74 /* LoginReducer.swift */,
+				6DA7050E2C65D02C0035CE02 /* ShopReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		6DE8E8E52C633570002FC4B0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6D7398622C5C77E0004B3E13 /* Info.plist */,
+				6D7398362C5C6C59004B3E13 /* Jandi_PlantApp.swift */,
+				6D73983A2C5C6C5B004B3E13 /* Assets.xcassets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6DE8E8EB2C633858002FC4B0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8E8EC2C633864002FC4B0 /* CalendarView.swift */,
+				6DE8E8F12C633CAA002FC4B0 /* CalendarDayView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		6DE8E8FA2C634551002FC4B0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8E8FB2C63455B002FC4B0 /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		6DE8E8FD2C634ECB002FC4B0 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8E8FE2C634ED8002FC4B0 /* ShopView.swift */,
+				6D5D56312C69D3AF0073865E /* ShopItem.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		6DE8E91C2C644541002FC4B0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D56392C69DA3B0073865E /* Resources */,
+				6DE8E91D2C64455A002FC4B0 /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6DE8E91D2C64455A002FC4B0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8E9172C6444ED002FC4B0 /* Pretendard-Black.otf */,
+				6DE8E91A2C6444ED002FC4B0 /* Pretendard-Bold.otf */,
+				6DE8E91B2C6444ED002FC4B0 /* Pretendard-ExtraBold.otf */,
+				6DE8E9152C6444ED002FC4B0 /* Pretendard-ExtraLight.otf */,
+				6DE8E9192C6444ED002FC4B0 /* Pretendard-Light.otf */,
+				6DE8E9162C6444ED002FC4B0 /* Pretendard-Medium.otf */,
+				6DE8E9182C6444ED002FC4B0 /* Pretendard-Regular.otf */,
+				6DE8E9132C6444ED002FC4B0 /* Pretendard-SemiBold.otf */,
+				6DE8E9142C6444ED002FC4B0 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +340,10 @@
 			dependencies = (
 			);
 			name = "Jandi-Plant";
+			packageProductDependencies = (
+				6DA7050B2C6460090035CE02 /* JandiNetwork */,
+				6D5D56492C69FDF60073865E /* Core */,
+			);
 			productName = "Jandi-Plant";
 			productReference = 6D7398332C5C6C59004B3E13 /* Jandi-Plant.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +416,8 @@
 				Base,
 			);
 			mainGroup = 6D73982A2C5C6C59004B3E13;
+			packageReferences = (
+			);
 			productRefGroup = 6D7398342C5C6C59004B3E13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +434,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5D56432C69F7830073865E /* Pretendard-ExtraLight.otf in Resources */,
 				6D73983E2C5C6C5B004B3E13 /* Preview Assets.xcassets in Resources */,
+				6D5D56412C69F77F0073865E /* Pretendard-Bold.otf in Resources */,
+				6D5D56452C69F7880073865E /* Pretendard-Medium.otf in Resources */,
+				6D5D56462C69F7980073865E /* Pretendard-Regular.otf in Resources */,
+				6D5D56422C69F7810073865E /* Pretendard-ExtraBold.otf in Resources */,
+				6D5D56442C69F7850073865E /* Pretendard-Light.otf in Resources */,
+				6D5D56472C69F79B0073865E /* Pretendard-SemiBold.otf in Resources */,
+				6D5D56402C69F76A0073865E /* Pretendard-Black.otf in Resources */,
+				6D5D56482C69F79D0073865E /* Pretendard-Thin.otf in Resources */,
 				6D73983B2C5C6C5B004B3E13 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +469,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7398392C5C6C59004B3E13 /* ContentView.swift in Sources */,
+				6D782CFF2C60945D004B0E74 /* LoginReducer.swift in Sources */,
+				6DE8E8F22C633CAA002FC4B0 /* CalendarDayView.swift in Sources */,
+				6D782D012C609494004B0E74 /* HomeReducer.swift in Sources */,
+				6D5D56322C69D3AF0073865E /* ShopItem.swift in Sources */,
+				6D782CFB2C6093DB004B0E74 /* RootView.swift in Sources */,
+				6D7398612C5C765B004B3E13 /* GithubLoginView.swift in Sources */,
+				6DE8E8FC2C63455B002FC4B0 /* SettingView.swift in Sources */,
+				6DE8E8ED2C633864002FC4B0 /* CalendarView.swift in Sources */,
+				6DE8E8FF2C634ED8002FC4B0 /* ShopView.swift in Sources */,
+				6D5D563C2C69DA3B0073865E /* Resource.swift in Sources */,
+				6DA7050F2C65D02C0035CE02 /* ShopReducer.swift in Sources */,
+				6D782CF92C609384004B0E74 /* HomeView.swift in Sources */,
+				6D782D032C6094B4004B0E74 /* AppReducer.swift in Sources */,
+				6D5D563A2C69DA3B0073865E /* Font.swift in Sources */,
+				6D5D56302C69D3780073865E /* LoadingView.swift in Sources */,
 				6D7398372C5C6C59004B3E13 /* Jandi_PlantApp.swift in Sources */,
+				6D5D563B2C69DA3B0073865E /* FontType.swift in Sources */,
+				6D5D56352C69D78C0073865E /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -425,11 +653,13 @@
 				DEVELOPMENT_TEAM = RQHZUCMHSH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jandi-Plant/Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +684,13 @@
 				DEVELOPMENT_TEAM = RQHZUCMHSH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jandi-Plant/Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +820,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D5D56492C69FDF60073865E /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		6DA7050B2C6460090035CE02 /* JandiNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JandiNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6D73982B2C5C6C59004B3E13 /* Project object */;
 }
