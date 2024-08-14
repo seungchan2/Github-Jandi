@@ -13,15 +13,15 @@ import JandiNetwork
 import ComposableArchitecture
 
 @Reducer
-struct HomeReducer {
-    struct State: Equatable {
+public struct HomeReducer {
+    public struct State: Equatable {
         var commits: [Commit] = []
         var isLoading: Bool = false
         var errorMessage: String?
         var currentMonthCommitsCount: Int = 0
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case onAppear
         case getCommitsResponse(Result<[Commit], APIError>)
         case updateCurrentMonthCommitsCount
@@ -29,23 +29,23 @@ struct HomeReducer {
     
     @Dependency(\.githubService) var githubService
 
-    func reduce(into state: inout State, action: Action) -> Effect<Action> {
+    public func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onAppear:
-            return handleOnAppear(&state)
+            return onAppear(&state)
             
         case let .getCommitsResponse(.success(commits)):
-            return handleGetCommitsSuccess(&state, commits: commits)
+            return fetchCommitsSuccess(&state, commits: commits)
             
         case let .getCommitsResponse(.failure(error)):
-            return handleGetCommitsFailure(&state, error: error)
+            return fetchCommitsFailure(&state, error: error)
             
         case .updateCurrentMonthCommitsCount:
-            return handleUpdateCurrentMonthCommitsCount(&state)
+            return updateCurrentMonthCommitsCount(&state)
         }
     }
         
-    private func handleOnAppear(_ state: inout State) -> Effect<Action> {
+    private func onAppear(_ state: inout State) -> Effect<Action> {
         state.isLoading = true
         return .run { send in
             let years = [2021, 2022, 2023, 2024]
@@ -53,7 +53,7 @@ struct HomeReducer {
             
             for year in years {
                 do {
-                    let commits = try await self.githubService.getCommits(id: "seungchan2", year: year)
+                    let commits = try await self.githubService.getCommits("seungchan2", year)
                         .mapError { $0 as Error }
                         .awaitOutput()
                     allCommits.append(contentsOf: commits)
@@ -67,19 +67,19 @@ struct HomeReducer {
         }
     }
     
-    private func handleGetCommitsSuccess(_ state: inout State, commits: [Commit]) -> Effect<Action> {
+    private func fetchCommitsSuccess(_ state: inout State, commits: [Commit]) -> Effect<Action> {
         state.isLoading = false
         state.commits = commits
         return .send(.updateCurrentMonthCommitsCount)
     }
     
-    private func handleGetCommitsFailure(_ state: inout State, error: APIError) -> Effect<Action> {
+    private func fetchCommitsFailure(_ state: inout State, error: APIError) -> Effect<Action> {
         state.isLoading = false
         state.errorMessage = error.localizedDescription
         return .none
     }
     
-    private func handleUpdateCurrentMonthCommitsCount(_ state: inout State) -> Effect<Action> {
+    private func updateCurrentMonthCommitsCount(_ state: inout State) -> Effect<Action> {
         let nonNoneCommits = state.commits.filter { $0.level != .none }
         state.currentMonthCommitsCount = nonNoneCommits.count
         JandiUserDefault.coin = nonNoneCommits.count

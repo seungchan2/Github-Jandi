@@ -35,36 +35,36 @@ struct ShopReducer {
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .themeTapped(let themeID):
-            handleThemeTapped(themeID: themeID, state: &state)
+            themeTapped(themeID: themeID, state: &state)
             return .none
             
         case .confirmPurchase:
-            handleConfirmPurchase(state: &state)
+            confirmPurchase(state: &state)
             return .send(.loadPurchasedThemes)
             
         case .dismissAlert:
-            handleDismissAlert(state: &state)
+            dismissAlert(state: &state)
             return .none
             
         case let .setSelectedThemeID(id):
-            handleSetSelectedThemeID(id: id, state: &state)
+            setSelectedThemeID(id: id, state: &state)
             return .none
             
         case let .showError(message):
-            handleShowError(message: message, state: &state)
+            showError(message: message, state: &state)
             return .none
             
         case .loadPurchasedThemes:
-            handleLoadPurchasedThemes(state: &state)
+            loadPurchasedThemes(state: &state)
             return .none
             
         case .unlockThemesBasedOnCoins:
-            handleUnlockThemesBasedOnCoins(state: &state)
+            unlockThemesBasedOnCoins(state: &state)
             return .none
         }
     }
     
-    private func handleThemeTapped(themeID: UUID, state: inout State) {
+    private func themeTapped(themeID: UUID, state: inout State) {
         if let selectedTheme = state.themes.first(where: { $0.id == themeID }) {
             if selectedTheme.isLocked {
                 state.alertTheme = selectedTheme
@@ -73,7 +73,7 @@ struct ShopReducer {
         }
     }
     
-    private func handleConfirmPurchase(state: inout State) {
+    private func confirmPurchase(state: inout State) {
         guard let alertTheme = state.alertTheme else { return }
         let currentCoins = JandiUserDefault.coin
         if currentCoins >= alertTheme.price {
@@ -92,21 +92,21 @@ struct ShopReducer {
         state.showAlert = false
     }
     
-    private func handleDismissAlert(state: inout State) {
+    private func dismissAlert(state: inout State) {
         state.showAlert = false
         state.showErrorAlert = false
     }
     
-    private func handleSetSelectedThemeID(id: UUID?, state: inout State) {
+    private func setSelectedThemeID(id: UUID?, state: inout State) {
         state.selectedThemeID = id
     }
     
-    private func handleShowError(message: String, state: inout State) {
+    private func showError(message: String, state: inout State) {
         state.errorMessage = message
         state.showErrorAlert = true
     }
     
-    private func handleLoadPurchasedThemes(state: inout State) {
+    private func loadPurchasedThemes(state: inout State) {
         if let savedThemesData = UserDefaults.standard.data(forKey: "savedThemes"),
            let savedThemes = try? JSONDecoder().decode([ThemeType].self, from: savedThemesData) {
             state.themes = savedThemes
@@ -143,7 +143,7 @@ struct ShopReducer {
         }
     }
     
-    private func handleUnlockThemesBasedOnCoins(state: inout State) {
+    private func unlockThemesBasedOnCoins(state: inout State) {
         let currentCoins = JandiUserDefault.coin
         for (index, theme) in state.themes.enumerated() {
             if currentCoins >= theme.price {
