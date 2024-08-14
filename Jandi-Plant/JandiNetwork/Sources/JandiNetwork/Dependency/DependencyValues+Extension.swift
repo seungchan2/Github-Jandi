@@ -8,13 +8,13 @@
 import Dependencies
 
 extension DependencyValues {
-    public var loginService: LoginServiceType {
+    public var loginService: LoginService {
         get { self[LoginService.self] }
-        set { self[LoginService.self] = newValue as! LoginService }
+        set { self[LoginService.self] = newValue }
     }
     
-    public var githubService: GithubServiceType {
+    public var githubService: GithubService {
         get { self[GithubService.self] }
-        set { self[GithubService.self] = newValue as! GithubService }
+        set { self[GithubService.self] = newValue }
     }
 }

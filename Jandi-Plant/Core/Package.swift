@@ -23,9 +23,12 @@ let package = Package(
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 "SwiftSoup"
-        ]),
+            ]),
         .testTarget(
             name: "CoreTests",
-            dependencies: ["Core"]),
+            dependencies: [
+                "Core",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]),
     ]
 )

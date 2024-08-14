@@ -23,4 +23,9 @@ public struct Commit: Equatable, Hashable {
             return allCases.filter { $0 != .none }
         }
     }
+    
+    public init(date: Date, level: Level) {
+        self.date = date
+        self.level = level
+    }
 }

@@ -1,5 +1,5 @@
 {
-  "originHash" : "23ab87d9c6960a7fe202de1b7911cea75d63bede18599561d303d18e52131539",
+  "originHash" : "f4c99aeb1c6085c67570ec7cd6d987526dc0814e320bb5b56f1ba4fbb80181ad",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -8,6 +8,42 @@
       "state" : {
         "revision" : "9fa31f4403da54855f1e2aeaeff478f4f0e40b13",
         "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "cwlcatchexception",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlCatchException.git",
+      "state" : {
+        "revision" : "3ef6999c73b6938cc0da422f2c912d0158abb0a0",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "cwlpreconditiontesting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+      "state" : {
+        "revision" : "2ef56b2caf25f55fa7eef8784c30d5a767550f54",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "nimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Nimble.git",
+      "state" : {
+        "revision" : "1f3bde57bde12f5e7b07909848c071e9b73d6edc",
+        "version" : "10.0.0"
+      }
+    },
+    {
+      "identity" : "quick",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Quick.git",
+      "state" : {
+        "revision" : "f9d519828bb03dfc8125467d8f7b93131951124c",
+        "version" : "5.0.1"
       }
     },
     {
@@ -43,7 +79,7 @@
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
         "branch" : "main",
-        "revision" : "85415973b2d1607d66755ffdbd0f469395492e8c"
+        "revision" : "27adbdc1e691b325851f6756bfe5a8afe104fa2a"
       }
     },
     {
@@ -83,6 +119,15 @@
       }
     },
     {
+      "identity" : "swift-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-navigation",
+      "state" : {
+        "revision" : "47cfd149ed01223d14fc8e3f52ae27d3a35fe036",
+        "version" : "2.0.3"
+      }
+    },
+    {
       "identity" : "swift-perception",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-perception",
@@ -107,15 +152,6 @@
       "state" : {
         "revision" : "e2d11208519549c2e5798d70190472045633f22f",
         "version" : "2.7.3"
-      }
-    },
-    {
-      "identity" : "swiftui-navigation",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swiftui-navigation",
-      "state" : {
-        "revision" : "fc91d591ebba1f90d65028ccb65c861e5979e898",
-        "version" : "1.5.4"
       }
     },
     {
