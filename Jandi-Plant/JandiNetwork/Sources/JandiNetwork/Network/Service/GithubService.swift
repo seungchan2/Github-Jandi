@@ -9,10 +9,14 @@ import Combine
 import Foundation
 
 import Dependencies
+import DependenciesMacros
 import SwiftSoup
 
+@DependencyClient
 public struct GithubService {
-    public var getCommits: (_ id: String, _ year: Int) -> AnyPublisher<[Commit], APIError>
+    public var getCommits: (_ id: String, _ year: Int) -> AnyPublisher<[Commit], APIError> = { _, _ in
+        Just([]).setFailureType(to: APIError.self).eraseToAnyPublisher()
+    }
 }
 
 extension GithubService: DependencyKey {
@@ -55,7 +59,7 @@ extension GithubService: DependencyKey {
             }
         )
     }
-
+    
     public static let previewValue = Self(
         getCommits: { _, _ in
             Just([Commit(date: Date(), level: .low)])
@@ -63,8 +67,8 @@ extension GithubService: DependencyKey {
                 .eraseToAnyPublisher()
         }
     )
+}
 
-    public static let testValue = Self(
-        getCommits: unimplemented("GithubServiceClient.getCommits")
-    )
+extension GithubService: TestDependencyKey {
+    public static let testValue = Self()
 }
