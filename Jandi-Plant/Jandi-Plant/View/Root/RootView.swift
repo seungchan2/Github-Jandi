@@ -9,16 +9,13 @@ import SwiftUI
 import ComposableArchitecture
 
 struct RootView: View {
-    let store: StoreOf<AppReducer>
+    let store: StoreOf<AppFeature>
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             Group {
                 if viewStore.isLoggedIn {
-                    IfLetStore(
-                        self.store.scope(state: \.homeState, action: \.home),
-                        then: HomeView.init(store:)
-                    )
+                    HomeView(store: store.scope(state: \.homeState, action: \.home))
                 } else {
                     GithubLoginView(store: store.scope(state: \.loginState, action: \.login))
                 }

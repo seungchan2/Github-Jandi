@@ -11,7 +11,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct GithubLoginView: View {
-    let store: StoreOf<LoginReducer>
+    let store: StoreOf<LoginFeature>
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in

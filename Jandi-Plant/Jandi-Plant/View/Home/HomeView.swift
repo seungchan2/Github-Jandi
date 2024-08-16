@@ -12,7 +12,7 @@ import Core
 import ComposableArchitecture
 
 struct HomeView: View {
-    let store: StoreOf<HomeReducer>
+    let store: StoreOf<HomeFeature>
     @State private var currentMonth: Date = Date()
     
     var body: some View {
@@ -39,7 +39,7 @@ struct HomeView: View {
                 .font(.pretendardSB(40))
             Spacer()
             HStack {
-                NavigationLink(destination: ShopView(store: Store(initialState: ShopReducer.State(), reducer: { ShopReducer() } ))) {
+                NavigationLink(destination: ShopView(store: Store(initialState: ShopFeature.State(), reducer: { ShopFeature() }))) {
                     Image(systemName: "cart.fill")
                         .foregroundColor(.black)
                 }
@@ -62,7 +62,7 @@ struct HomeView: View {
         }
     }
     
-    func calendarView(viewStore: ViewStore<HomeReducer.State, HomeReducer.Action>) -> some View {
+    func calendarView(viewStore: ViewStore<HomeFeature.State, HomeFeature.Action>) -> some View {
             VStack {
                 TabView(selection: $currentMonth) {
                     ForEach(generateMonths(startYear: 2021, endYear: 2024), id: \.self) { month in

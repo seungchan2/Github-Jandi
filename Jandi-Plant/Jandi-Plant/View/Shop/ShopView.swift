@@ -20,7 +20,7 @@ struct ThemeType: Identifiable, Equatable, Codable {
 }
 
 struct ShopView: View {
-    let store: StoreOf<ShopReducer>
+    let store: StoreOf<ShopFeature>
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -66,7 +66,7 @@ struct ShopView: View {
 }
 
 private extension ShopView {
-    func purchaseAlert(viewStore: ViewStore<ShopReducer.State, ShopReducer.Action>) -> Alert {
+    func purchaseAlert(viewStore: ViewStore<ShopFeature.State, ShopFeature.Action>) -> Alert {
         return Alert(
             title: Text("해당 이모티콘을 잠금 해제하시겠습니까?"),
             message: Text(
@@ -82,7 +82,7 @@ private extension ShopView {
         )
     }
     
-    func loadSavedTheme(viewStore: ViewStore<ShopReducer.State, ShopReducer.Action>) {
+    func loadSavedTheme(viewStore: ViewStore<ShopFeature.State, ShopFeature.Action>) {
         let savedTheme = JandiUserDefault.selectedTheme
         if let theme = viewStore.themes.first(where: { $0.theme == savedTheme }) {
             viewStore.send(.setSelectedThemeID(theme.id))

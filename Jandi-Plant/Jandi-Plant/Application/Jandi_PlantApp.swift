@@ -17,8 +17,8 @@ struct Jandi_PlantApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView(store: Store(initialState: AppReducer.State(),
-                                  reducer: { AppReducer() })
+            RootView(store: Store(initialState: AppFeature.State(),
+                                  reducer: { AppFeature() })
             )
         }
     }
