@@ -13,27 +13,34 @@ import JandiNetwork
 import ComposableArchitecture
 
 @Reducer
-struct AppReducer {
+struct AppFeature {
     struct State: Equatable {
-        var loginState = LoginReducer.State()
-        var homeState: HomeReducer.State? = nil
+        var loginState = LoginFeature.State()
+        var homeState = HomeFeature.State()
         var isLoggedIn: Bool = UserDefaults.standard.string(forKey: "accessToken") != nil
     }
     
     public enum Action: Equatable {
-        case login(LoginReducer.Action)
-        case home(HomeReducer.Action)
+        case login(LoginFeature.Action)
+        case home(HomeFeature.Action)
         case checkLoginStatus
         case navigateToHome
         case handleOpenURL(URL)
     }
     
     var body: some Reducer<State, Action> {
+        Scope(state: \.homeState, action: \.home) {
+            HomeFeature()
+        }
+        
+        Scope(state: \.loginState, action: \.login) {
+            LoginFeature()
+        }
         Reduce { state, action in
             switch action {
             case .login(.requestAccessToken(.success(_))):
                 state.isLoggedIn = true
-                state.homeState = HomeReducer.State()
+                state.homeState = HomeFeature.State()
                 return .none
             case .login:
                 return .none
@@ -42,11 +49,11 @@ struct AppReducer {
             case .checkLoginStatus:
                 state.isLoggedIn = !JandiUserDefault.accessToken.isEmpty
                 if state.isLoggedIn {
-                    state.homeState = HomeReducer.State()
+                    state.homeState = HomeFeature.State()
                 }
                 return .none
             case .navigateToHome:
-                state.homeState = HomeReducer.State()
+                state.homeState = HomeFeature.State()
                 return .none
             case let .handleOpenURL(url):
                 let code = url.absoluteString.components(separatedBy: "code=").last ?? ""
@@ -59,11 +66,6 @@ struct AppReducer {
                 }
             }
         }
-        .ifLet(\.homeState, action: \.home) {
-            HomeReducer()
-        }
-        Scope(state: \.loginState, action: \.login) {
-            LoginReducer()
-        }
+        
     }
 }

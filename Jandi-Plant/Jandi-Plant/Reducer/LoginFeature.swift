@@ -15,7 +15,7 @@ import Dependencies
 import ComposableArchitecture
 
 @Reducer
-struct LoginReducer {
+struct LoginFeature {
     struct State: Equatable {
         var isLoggedIn: Bool = !JandiUserDefault.accessToken.isEmpty
     }
@@ -32,22 +32,22 @@ struct LoginReducer {
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .loginButtonTapped:
-            return loginButtonTapped()
+            return self.loginButtonTapped()
             
         case let .fetchGithubLogin(.success(code)):
-            return fetchGithubLoginSuccess(code)
+            return self.fetchGithubLoginSuccess(code)
             
         case .fetchGithubLogin(.failure(_)):
             return .none
             
         case let .requestAccessToken(.success(token)):
-            return requestAccessTokenSuccess(token, state: &state)
+            return self.requestAccessTokenSuccess(token, state: &state)
         
         case .requestAccessToken(.failure(_)):
             return .none
             
         case .handleOpenURL(let url):
-            return openURL(url)
+            return self.openURL(url)
         }
     }
     

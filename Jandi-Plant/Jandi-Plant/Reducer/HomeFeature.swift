@@ -13,7 +13,8 @@ import JandiNetwork
 import ComposableArchitecture
 
 @Reducer
-public struct HomeReducer {
+public struct HomeFeature {
+    @ObservableState
     public struct State: Equatable {
         var commits: [Commit] = []
         var isLoading: Bool = false

@@ -12,7 +12,7 @@ import Core
 import ComposableArchitecture
 
 @Reducer
-struct ShopReducer {
+struct ShopFeature {
     struct State: Equatable {
         var themes: [ThemeType] = []
         var selectedThemeID: UUID?
@@ -35,32 +35,31 @@ struct ShopReducer {
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .themeTapped(let themeID):
-            themeTapped(themeID: themeID, state: &state)
+            self.themeTapped(themeID: themeID, state: &state)
             return .none
             
         case .confirmPurchase:
-            confirmPurchase(state: &state)
+            self.confirmPurchase(state: &state)
             return .send(.loadPurchasedThemes)
             
         case .dismissAlert:
-            dismissAlert(state: &state)
+            self.dismissAlert(state: &state)
             return .none
             
         case let .setSelectedThemeID(id):
-            setSelectedThemeID(id: id, state: &state)
+            self.setSelectedThemeID(id: id, state: &state)
             return .none
             
         case let .showError(message):
-            showError(message: message, state: &state)
+            self.showError(message: message, state: &state)
             return .none
             
         case .loadPurchasedThemes:
-            loadPurchasedThemes(state: &state)
+            self.loadPurchasedThemes(state: &state)
             return .none
             
         case .unlockThemesBasedOnCoins:
-            unlockThemesBasedOnCoins(state: &state)
-            return .none
+            return self.unlockThemesBasedOnCoins(state: &state)
         }
     }
     
@@ -143,7 +142,7 @@ struct ShopReducer {
         }
     }
     
-    private func unlockThemesBasedOnCoins(state: inout State) {
+    private func unlockThemesBasedOnCoins(state: inout State) -> Effect<Action> {
         let currentCoins = JandiUserDefault.coin
         for (index, theme) in state.themes.enumerated() {
             if currentCoins >= theme.price {
@@ -153,5 +152,7 @@ struct ShopReducer {
         if let savedThemesData = try? JSONEncoder().encode(state.themes) {
             UserDefaults.standard.set(savedThemesData, forKey: "savedThemes")
         }
+        
+        return .none
     }
 }
