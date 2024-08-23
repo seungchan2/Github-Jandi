@@ -32,34 +32,36 @@ struct ShopFeature {
         case unlockThemesBasedOnCoins
     }
     
-    func reduce(into state: inout State, action: Action) -> Effect<Action> {
-        switch action {
-        case .themeTapped(let themeID):
-            self.themeTapped(themeID: themeID, state: &state)
-            return .none
-            
-        case .confirmPurchase:
-            self.confirmPurchase(state: &state)
-            return .send(.loadPurchasedThemes)
-            
-        case .dismissAlert:
-            self.dismissAlert(state: &state)
-            return .none
-            
-        case let .setSelectedThemeID(id):
-            self.setSelectedThemeID(id: id, state: &state)
-            return .none
-            
-        case let .showError(message):
-            self.showError(message: message, state: &state)
-            return .none
-            
-        case .loadPurchasedThemes:
-            self.loadPurchasedThemes(state: &state)
-            return .none
-            
-        case .unlockThemesBasedOnCoins:
-            return self.unlockThemesBasedOnCoins(state: &state)
+    public var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .themeTapped(let themeID):
+                self.themeTapped(themeID: themeID, state: &state)
+                return .none
+                
+            case .confirmPurchase:
+                self.confirmPurchase(state: &state)
+                return .send(.loadPurchasedThemes)
+                
+            case .dismissAlert:
+                self.dismissAlert(state: &state)
+                return .none
+                
+            case let .setSelectedThemeID(id):
+                self.setSelectedThemeID(id: id, state: &state)
+                return .none
+                
+            case let .showError(message):
+                self.showError(message: message, state: &state)
+                return .none
+                
+            case .loadPurchasedThemes:
+                self.loadPurchasedThemes(state: &state)
+                return .none
+                
+            case .unlockThemesBasedOnCoins:
+                return self.unlockThemesBasedOnCoins(state: &state)
+            }
         }
     }
     

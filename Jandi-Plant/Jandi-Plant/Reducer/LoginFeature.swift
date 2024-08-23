@@ -29,25 +29,27 @@ struct LoginFeature {
     
     @Dependency(\.loginService) var loginService
     
-    func reduce(into state: inout State, action: Action) -> Effect<Action> {
-        switch action {
-        case .loginButtonTapped:
-            return self.loginButtonTapped()
-            
-        case let .fetchGithubLogin(.success(code)):
-            return self.fetchGithubLoginSuccess(code)
-            
-        case .fetchGithubLogin(.failure(_)):
-            return .none
-            
-        case let .requestAccessToken(.success(token)):
-            return self.requestAccessTokenSuccess(token, state: &state)
-        
-        case .requestAccessToken(.failure(_)):
-            return .none
-            
-        case .handleOpenURL(let url):
-            return self.openURL(url)
+    public var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .loginButtonTapped:
+                return self.loginButtonTapped()
+                
+            case let .fetchGithubLogin(.success(code)):
+                return self.fetchGithubLoginSuccess(code)
+                
+            case .fetchGithubLogin(.failure(_)):
+                return .none
+                
+            case let .requestAccessToken(.success(token)):
+                return self.requestAccessTokenSuccess(token, state: &state)
+                
+            case .requestAccessToken(.failure(_)):
+                return .none
+                
+            case .handleOpenURL(let url):
+                return self.openURL(url)
+            }
         }
     }
     

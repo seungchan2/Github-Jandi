@@ -14,6 +14,9 @@ import JandiNetwork
 
 import ComposableArchitecture
 
+@testable import Jandi_Plant
+
+@MainActor
 final class HomeReducerTests: XCTestCase {
     
     func test_onAppear_fetchCommitsSuccess() async throws {
@@ -25,8 +28,8 @@ final class HomeReducerTests: XCTestCase {
         let clock = TestClock()
         
         let store = TestStore(
-            initialState: HomeReducer.State(),
-            reducer: { HomeReducer() },
+            initialState: HomeFeature.State(),
+            reducer: { HomeFeature() },
             withDependencies: {
                 // 여기에 정확한 mockService 설정
                 $0.githubService = GithubService.liveValue
