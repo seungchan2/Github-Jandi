@@ -15,8 +15,8 @@ import ComposableArchitecture
 @Reducer
 struct AppFeature {
     struct State: Equatable {
-        var loginState = LoginFeature.State()
-        var homeState = HomeFeature.State()
+        @CopyOnWrite var loginState = LoginFeature.State()
+        @CopyOnWrite var homeState = HomeFeature.State()
         var isLoggedIn: Bool = UserDefaults.standard.string(forKey: "accessToken") != nil
     }
     
@@ -32,7 +32,6 @@ struct AppFeature {
         Scope(state: \.homeState, action: \.home) {
             HomeFeature()
         }
-        
         Scope(state: \.loginState, action: \.login) {
             LoginFeature()
         }
