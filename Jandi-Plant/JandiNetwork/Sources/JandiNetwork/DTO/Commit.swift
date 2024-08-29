@@ -8,6 +8,7 @@
 import Foundation
 
 public struct Commit: Equatable, Hashable {
+    
     public let date: Date
     public let level: Level
     
